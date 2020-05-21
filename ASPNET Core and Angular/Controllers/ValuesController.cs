@@ -21,6 +21,7 @@ namespace ASPNET_Core_and_Angular.Controllers
             this._context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {

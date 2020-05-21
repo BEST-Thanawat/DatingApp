@@ -1,12 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-  constructor() { }
+  registerMode = false;
+
+  constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    //throw new Error("Method not implemented.");
+  }
+
+  registerToggle() {
+    this.registerMode = true;
+  }
+
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
   }
 }

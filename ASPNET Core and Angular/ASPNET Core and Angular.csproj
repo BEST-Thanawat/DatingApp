@@ -15,6 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AngularJS.Intellisense" Version="1.0.3" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
