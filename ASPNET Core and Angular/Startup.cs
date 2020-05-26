@@ -42,7 +42,7 @@ namespace ASPNET_Core_and_Angular
                 configuration.RootPath = "ClientApp/dist";
             });
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-            //    .AddJsonOptions(opt => opt.JsonSerializerOptions.);
+            //    .AddJsonOptions(opt => opt.);
             services.AddCors();
             services.AddAutoMapper(typeof(DatingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>();

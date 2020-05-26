@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var home_component_1 = require("./home/home.component");
-var member_list_component_1 = require("./member-list/member-list.component");
+var member_list_component_1 = require("./members/member-list/member-list.component");
 var messages_component_1 = require("./messages/messages.component");
 var lists_component_1 = require("./lists/lists.component");
 var auth_guard_1 = require("./_guards/auth.guard");
