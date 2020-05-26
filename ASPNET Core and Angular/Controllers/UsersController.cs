@@ -38,7 +38,7 @@ namespace ASPNET_Core_and_Angular.Controllers
         {
             var user = await _repo.GetUser(id);
             var userToReturn = _mapper.Map<UserForDetailedDto>(user);
-            return Ok(user);
+            return Ok(userToReturn);
         }
     }
 }
