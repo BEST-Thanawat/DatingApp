@@ -4,14 +4,16 @@ using ASPNET_Core_and_Angular.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASPNET_Core_and_Angular.Migrations
 {
     [DbContext(typeof(Angular_Core_DBContext))]
-    partial class Angular_Core_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20200526052149_ExtendedUserClass")]
+    partial class ExtendedUserClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
