@@ -15,14 +15,10 @@ var MemberDetailComponent = /** @class */ (function () {
         this.route = route;
     }
     MemberDetailComponent.prototype.ngOnInit = function () {
-        this.loadUser();
-    };
-    MemberDetailComponent.prototype.loadUser = function () {
         var _this = this;
-        this.userService.getUser(+this.route.snapshot.params['id']).subscribe(function (user) {
-            _this.user = user;
-        }, function (error) {
-            _this.alertify.error(error);
+        //this.loadUser();
+        this.route.data.subscribe(function (data) {
+            _this.user = data['user'];
         });
     };
     MemberDetailComponent = __decorate([

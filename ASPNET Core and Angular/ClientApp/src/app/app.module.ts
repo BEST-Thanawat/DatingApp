@@ -27,6 +27,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { AlertifyService } from './_services/alertify.service';
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { MemberListResolver } from './_resolvers/member-list.resolver';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -68,7 +70,9 @@ export function tokenGetter() {
     ErrorInterceptorProvider,
     AlertifyService,
     AuthGuard,
-    UserService
+    UserService,
+    MemberDetailResolver,
+    MemberListResolver
   ],
   bootstrap: [AppComponent]
 })

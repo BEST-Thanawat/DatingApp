@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
@@ -44,16 +44,28 @@
     <None Remove="ClientApp\src\app\routes.ts" />
     <None Remove="ClientApp\src\app\_models\Photo.ts" />
     <None Remove="ClientApp\src\app\_models\user.ts" />
+    <None Remove="ClientApp\src\app\_resolvers\member-detail.resolver.ts" />
+    <None Remove="ClientApp\src\app\_resolvers\member-list.resolver.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\routes.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\Photo.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\user.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_resolvers\member-list.resolver.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\_resolvers\member-detail.resolver.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\_guards\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ClientApp\src\app\_resolvers\member-list.resolver.js">
+      <DependentUpon>member-list.resolver.ts</DependentUpon>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
