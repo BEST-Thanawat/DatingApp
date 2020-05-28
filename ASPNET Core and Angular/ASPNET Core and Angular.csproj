@@ -63,10 +63,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\_guards\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="ClientApp\src\app\_resolvers\member-list.resolver.js">
       <DependentUpon>member-list.resolver.ts</DependentUpon>
     </None>
