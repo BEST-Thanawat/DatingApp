@@ -45,6 +45,7 @@
     <None Remove="ClientApp\src\app\_models\Photo.ts" />
     <None Remove="ClientApp\src\app\_models\user.ts" />
     <None Remove="ClientApp\src\app\_resolvers\member-detail.resolver.ts" />
+    <None Remove="ClientApp\src\app\_resolvers\member-edit.resolver.ts" />
     <None Remove="ClientApp\src\app\_resolvers\member-list.resolver.ts" />
   </ItemGroup>
 
@@ -52,6 +53,9 @@
     <TypeScriptCompile Include="ClientApp\src\app\routes.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\Photo.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\user.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_resolvers\member-edit.resolver.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\_resolvers\member-list.resolver.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
