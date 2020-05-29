@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ASPNET_Core_and_Angular.Data;
 using ASPNET_Core_and_Angular.Dtos;
 using ASPNET_Core_and_Angular.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -21,11 +22,13 @@ namespace ASPNET_Core_and_Angular.Controllers
     {
         private readonly IAuthRepository _repo;
         private readonly IConfiguration _config;
+        private readonly IMapper _mapper;
 
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        public AuthController(IAuthRepository repo, IConfiguration config, IMapper mapper)
         {
             _repo = repo;
             _config = config;
+            _mapper = mapper;
         }
 
         [HttpPost("register")]
@@ -66,7 +69,8 @@ namespace ASPNET_Core_and_Angular.Controllers
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new { token = tokenHandler.WriteToken(token) });
+            var user = _mapper.Map<UserForListDto>(userFromRepo);
+            return Ok(new { token = tokenHandler.WriteToken(token), user });
         }
     }
 }
