@@ -19,6 +19,7 @@
     <PackageReference Include="AngularJS.Intellisense" Version="1.0.3" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="bootstrap" Version="4.5.0" />
+    <PackageReference Include="CloudinaryDotNet" Version="1.11.0" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
